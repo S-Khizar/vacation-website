@@ -1,0 +1,410 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu, Helvetica, sans-serif;
+}
+.navb {
+  width: 100%;
+  background: #323232;
+}
+.logo-img {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+.nav-low {
+  width: 100%;
+  background-image: url("public/beach-vacation.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.inside-div {
+  width: 53%;
+  margin: 0 auto;
+  padding-top: 85px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.fst-head {
+  font-size: 23px;
+  line-height: 1.8;
+}
+.snd-head {
+  font-size: 68px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  line-height: 0.9;
+}
+.inside-div1 {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.card-div-hd {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.grid-h {
+  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 19px;
+  font-size: 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 0px;
+}
+.card2 {
+  position: relative;
+  height: 200px;
+
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 158px;
+}
+.card2 button {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-weight: 700;
+  background-color: #68af36;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+.grid-h2 {
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: space-between;
+}
+
+.slide {
+  width: 15%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  object-fit: cover;
+}
+
+.slide p {
+  font-size: 16px;
+  color: rgb(0, 146, 243);
+  margin-top: 10px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.slide h4 {
+  font-size: 18px;
+  color: rgb(34, 34, 34);
+  margin-top: 10px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.prev-btn {
+  left: 10px;
+  border-radius: 50%;
+}
+
+.next-btn {
+  right: 10px;
+  border-radius: 50%;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-container {
+  padding: 20px;
+}
+
+.slider-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    min-width: 100%;
+  }
+
+  .prev-btn,
+  .next-btn {
+    right: 20px;
+  }
+}
+
+.fph {
+  color: #0095f3;
+  font-size: 42px;
+  text-align: center;
+  font-weight: bold;
+}
+.para-center {
+  text-align: center;
+  width: 100%;
+}
+.first-para {
+  width: 38%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.sec-para {
+  width: 65%;
+  text-align: left;
+}
+.sph {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.scroll-container {
+  min-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  padding-top: 55px;
+}
+
+.scroll-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("public/beach-bg.avif");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -1;
+  transition: transform 0.1s;
+}
+
+.content {
+  padding: 20px;
+  width: 73%;
+  margin: 0 auto;
+  position: relative;
+}
+.content h1 {
+  color: #2f2f2f;
+}
+.tbox {
+  display: flex;
+  gap: 25px;
+}
+.wbox {
+  text-align: left;
+  font-size: 16px;
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  width: 50%;
+
+  height: 208px;
+}
+.wbox h2 {
+  margin-bottom: 10px;
+  color: #2f2f2f;
+}
+.beach-btm-para {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  text-align: left;
+}
+.waves {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("public//waves.jpg");
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.waves-partition {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.waves-c {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 70%;
+}
+.faqs {
+  padding-top: 35px;
+  background: #000;
+  color: white;
+  padding-bottom: 55px;
+}
+.faqspanel {
+  width: 50%;
+  margin: 0 auto;
+  background: white;
+  color: #000;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.accordion {
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  padding: 25px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: #777777;
+}
+
+hr {
+  width: 92%;
+  margin: 0 auto;
+  border-width: 2px;
+  color: #000;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.support {
+  padding: 40px;
+}
+.support-head {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.support-body {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.sb1,
+.sb2 {
+  width: 50%;
+}
+.support-body h2 {
+  font-size: 18px;
+}
+
+.support-body p {
+  color: rgb(119, 119, 119);
+  font-size: 14px;
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(34, 34, 34);
+  color: rgb(119, 119, 119);
+  text-align: center;
+}
