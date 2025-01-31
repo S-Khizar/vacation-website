@@ -445,7 +445,6 @@ const imageSlider2 = [
   },
 ];
 
-// Second Slider (International Resorts)
 let currentIndex2 = 0;
 const slider2 = document.getElementById("slider2");
 const prevBtn2 = document.getElementById("prevBtn2");
@@ -471,38 +470,35 @@ function updateDots2() {
     dot.dataset.index = i;
     dotsContainer2.appendChild(dot);
     dot.addEventListener("click", () => {
-      currentIndex2 = i * 6;
+      currentIndex2 = i * 2;
       updateSliderPosition2();
     });
   }
 }
 
 nextBtn2.addEventListener("click", () => {
-  if (currentIndex2 + 6 < imageSlider2.length) currentIndex2 += 6;
+  if (currentIndex2 + 2 < imageSlider2.length) currentIndex2 += 2;
   else currentIndex2 = 0;
   updateSliderPosition2();
 });
 
 prevBtn2.addEventListener("click", () => {
-  if (currentIndex2 - 6 >= 0) currentIndex2 -= 6;
-  else currentIndex2 = imageSlider2.length - 6;
+  if (currentIndex2 - 2 >= 0) currentIndex2 -= 2;
+  else currentIndex2 = imageSlider2.length - 2;
   updateSliderPosition2();
 });
 
-// Initialize both sliders
 updateSliderPosition();
 updateDots();
 updateSliderPosition2();
 updateDots2();
 
-// Update background position on container scroll
 const container = document.querySelector(".scroll-container");
 container.addEventListener("scroll", () => {
   const scrollTop = container.scrollTop;
   container.style.setProperty("--scroll-offset", `${scrollTop * 0.5}px`);
 });
 
-// Initialize CSS variable
 container.style.setProperty("--scroll-offset", "0px");
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -518,3 +514,5 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// https://codepen.io/miguelznunez/pen/poaXvab
