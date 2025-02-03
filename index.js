@@ -222,25 +222,25 @@ function updateSliderPosition() {
 
 function updateDots() {
   dotsContainer.innerHTML = "";
-  const totalDots = Math.ceil(imageSlider1.length / 6);
+  const totalDots = Math.ceil(imageSlider1.length / 2);
 
   for (let i = 0; i < totalDots; i++) {
     const dot = document.createElement("span");
     dot.classList.add("dot");
-    if (i === Math.floor(currentIndex / 6)) dot.classList.add("active");
+    if (i === Math.floor(currentIndex / 2)) dot.classList.add("active");
     dot.dataset.index = i;
     dotsContainer.appendChild(dot);
 
     dot.addEventListener("click", () => {
-      currentIndex = i * 6;
+      currentIndex = i * 2;
       updateSliderPosition();
     });
   }
 }
 
 nextBtn.addEventListener("click", () => {
-  if (currentIndex + 6 < imageSlider1.length) {
-    currentIndex += 6;
+  if (currentIndex + 2 < imageSlider1.length) {
+    currentIndex += 2;
   } else {
     currentIndex = 0;
   }
@@ -248,16 +248,13 @@ nextBtn.addEventListener("click", () => {
 });
 
 prevBtn.addEventListener("click", () => {
-  if (currentIndex - 6 >= 0) {
-    currentIndex -= 6;
+  if (currentIndex - 2 >= 0) {
+    currentIndex -= 2;
   } else {
-    currentIndex = imageSlider1.length - 6;
+    currentIndex = imageSlider1.length - 2;
   }
   updateSliderPosition();
 });
-
-updateSliderPosition();
-updateDots();
 
 const images1 = [
   "lv.avif",
@@ -462,11 +459,11 @@ function updateSliderPosition2() {
 
 function updateDots2() {
   dotsContainer2.innerHTML = "";
-  const totalDots = Math.ceil(imageSlider2.length / 6);
+  const totalDots = Math.ceil(imageSlider2.length / 2);
   for (let i = 0; i < totalDots; i++) {
     const dot = document.createElement("span");
     dot.classList.add("dot");
-    if (i === Math.floor(currentIndex2 / 6)) dot.classList.add("active");
+    if (i === Math.floor(currentIndex2 / 2)) dot.classList.add("active");
     dot.dataset.index = i;
     dotsContainer2.appendChild(dot);
     dot.addEventListener("click", () => {
@@ -514,5 +511,3 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-// https://codepen.io/miguelznunez/pen/poaXvab
