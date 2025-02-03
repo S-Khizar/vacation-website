@@ -60,6 +60,9 @@
   margin-top: 20px;
   font-size: 20px;
 }
+.card-div h2 {
+  color: #2f2f2f;
+}
 .card {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -70,6 +73,7 @@
   padding-top: 37px;
   padding-bottom: 19px;
   font-size: 22px;
+  color: #2f2f2f;
 }
 
 .grid {
@@ -95,8 +99,8 @@
 }
 .card2 button {
   position: absolute;
-  bottom: 4px;
-  right: 4px;
+  bottom: 6px;
+  right: 3px;
   font-weight: 700;
   background-color: #68af36;
   color: #fff;
@@ -236,6 +240,9 @@
   margin: 0 auto;
   margin-bottom: 100px;
 }
+.first-para p {
+  color: rgba(0, 0, 0, 0.47);
+}
 .sec-para {
   width: 65%;
   text-align: left;
@@ -322,7 +329,7 @@
 
 .faqs {
   padding-top: 35px;
-  background: #000;
+  background: #2f2f2f;
   color: white;
   padding-bottom: 55px;
 }
@@ -408,6 +415,7 @@ hr {
 }
 .support-body h2 {
   font-size: 18px;
+  overflow-wrap: break-word;
 }
 
 .support-body p {
@@ -420,10 +428,12 @@ footer {
   background-color: rgb(34, 34, 34);
   color: rgb(119, 119, 119);
   text-align: center;
+  margin: auto 0;
 }
 @media screen and (max-width: 768px) {
   .wavy-coup {
     width: 87%;
+    padding-bottom: 40px;
   }
   .waves-partition {
     display: flex;
@@ -479,8 +489,65 @@ footer {
   }
   .grid {
     grid-template-columns: repeat(1, 1fr);
+    gap: 14px;
+    padding: 10px;
   }
   .faqspanel {
     width: 100%;
+  }
+  .first-para {
+    width: 89%;
+  }
+  .sb1,
+  .sb2 {
+    width: 100%;
+  }
+  .sb1 h2 {
+    color: #2f2f2f;
+  }
+  .support {
+    padding: 0;
+  }
+  .support-body img {
+    height: 97.5px;
+    width: 130px;
+  }
+  .support h2 {
+    font-size: 18px;
+  }
+  .content {
+    padding: 8px;
+  }
+  .support-head {
+    padding-top: 60px;
+  }
+  .support-body {
+    width: 88%;
+    margin-bottom: 82px;
+  }
+  .sb1 {
+    margin-bottom: 40px;
+  }
+  footer {
+    padding: 45px 0;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  .faqs h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .faqs {
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+  nav img {
+    width: 300px;
+    height: 48.5px;
+  }
+  .snd-head {
+    font-size: 28px;
+    padding: 0 10px;
   }
 }
